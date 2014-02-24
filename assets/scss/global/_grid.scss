@@ -1,0 +1,115 @@
+/*- ==========================================================================
+  975px Grid 
+  ========================================================================== */
+
+/* Breakpoint Variables */
+
+// The breakpoint size is set based on the body font-size which is 100% or 16px.
+
+$break-xsmall: 20em; /*320px*/
+$break-small: 37.5em; /*600px*/
+$break-medium: 48em; /*768px*/
+$break-large: 64em; /*1024px*/
+$break-xlarge: 75em; /*1200px*/
+
+// Color Variables
+
+$blue: #00a1d9;
+$dark-blue: #008ebf;
+$dark-gray: #222222;
+
+
+.container {
+	//border: 1px solid blue;
+	max-width: 999px;
+	margin: 1em auto;
+	background-color: #fff;
+	padding: 1em 0;
+	border: 1px solid black(.25);
+}
+
+.row {
+	//border: 1px solid red;
+ 	width: auto; 
+ 	max-width: none; 
+ 	min-width: 0; 
+ 	margin: 0;
+ 	padding: 10px 0; 	
+}
+
+.col {
+	float: left;
+}
+.col > div {
+	padding: 0 1em;
+}
+.col > h4 {
+	color: #fff;
+	font-size: 14px;
+}
+.col > h5 {
+	color: #fff;
+	font-size: 12px;
+}
+
+// Grid Columns
+
+.one-cl {
+	width: 100%;
+}
+.two-cl {
+	width: 49%;
+	margin-right: 2%;
+}
+.three-cl {
+	width: 32%;
+	margin-right: 2%;
+}
+.four-cl {
+	width: 23.5%;
+	margin-right: 2%;	
+}
+.six-cl {
+	width: 15%;
+	margin-right: 2%;	
+}
+.one-cl:last-child, .two-cl:last-child, .three-cl:last-child, .four-cl:last-child, .six-cl:last-child {
+	margin-right: 0;
+}
+
+.two-cl-left {
+	width: 32%;
+	margin-right: 2%;	
+}
+.four-cl-right {
+	width: 66%;
+	margin-right: 0%;	
+}
+.two-cl-right {
+	width: 32%;
+	margin-right: 0%;
+}
+.four-cl-left {
+	width: 66%;
+	margin-right: 2%;
+}
+
+/* Centered */
+
+.two-cl-centered {
+	width: 32%; 
+	margin: 0 auto;
+	float: none;
+}
+.three-cl-centered {
+	width: 49%; 
+	margin: 0 auto;	
+	float: none;	
+}
+.four-cl-centered {
+	width: 66%;
+	margin: 0 auto; 			
+	float: none;
+}
+
+

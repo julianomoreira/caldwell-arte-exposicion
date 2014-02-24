@@ -1942,11 +1942,26 @@ a:focus {
   border-left: 1px solid #d3d3cb;
   min-height: 800px; }
 
+body.artists-page .right-col {
+  border: none; }
+
 .section-title {
   font-size: 14px;
   text-transform: uppercase;
   font-family: "ff-dagny-web-pro", sans-serif;
-  color: #b64630; }
+  color: #b64630;
+  padding: 0 0 20px 0; }
+
+.sub-section-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "ff-dagny-web-pro", sans-serif;
+  color: #b64630;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #d3d3cb; }
+
+body.home .section-title {
+  padding: 0; }
 
 .category {
   padding: 10px 0 0 0; }
@@ -1992,6 +2007,28 @@ a:focus {
       padding: 10px 20px; }
   .artist-excerpt:first-child {
     padding: 0; }
+
+/* Artist Page */
+body.artists-page .artist-photo img {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.25); }
+
+h3.artist-name {
+  font-family: "kepler-std-n4", "kepler-std", Cambria, Georgia, "Bitstream charter", "Century schoolbook 1", "Liberation serif", times, serif;
+  font-size: 32px;
+  color: #4b4b4b;
+  font-weight: normal;
+  border-bottom: 1px solid #d3d3cb;
+  padding-bottom: 5px; }
+
+.artist-art {
+  padding: 15px 0 30px 0; }
+  .artist-art .art img {
+    border: 5px solid rgba(0, 0, 0, 0.25); }
+  .artist-art h5 {
+    margin: .5em 0 0 0;
+    color: #4b4b4b; }
 
 footer {
   background-color: #d3d3cb;

@@ -105,11 +105,30 @@ a:focus { color: #2795b6; }
 	border-left: 1px solid #d3d3cb;
 	min-height: 800px;
 }
+body.artists-page {
+	.right-col {
+		border: none;
+	}	
+}
 .section-title {
 	font-size: 14px;
 	text-transform: uppercase;
 	font-family: $dagny;
 	color: $marroom;
+	padding: 0 0 20px 0;
+}
+.sub-section-title {
+	font-size: 14px;
+	text-transform: uppercase;
+	font-family: $dagny;
+	color: $marroom;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid $lightgray;
+}
+body.home {
+	.section-title {
+		padding: 0;
+	}
 }
 .category {	
 	padding: 10px 0 0 0;
@@ -166,6 +185,43 @@ a:focus { color: #2795b6; }
 		padding: 0;
 	}
 }
+
+
+/* Artist Page */
+
+body.artists-page {
+	.artist-photo {
+		// width: 30%;	
+		// float: left;
+		img {
+			padding: 4px;
+			background-color: #fff;
+			border: 1px solid rgba(0,0,0,.25);
+		}		
+	}
+}
+h3.artist-name {
+	font-family: $kepler;
+	font-size: 32px;
+	color: $text-color;
+	font-weight: normal;
+	border-bottom: 1px solid $lightgray;
+	padding-bottom: 5px;
+}
+.artist-art {
+	padding: 15px 0 30px 0;
+	.art {
+		img {
+			border: 5px solid rgba(0,0,0,.25);
+		}
+	}	
+	h5 {
+		margin: .5em 0 0 0;
+		color: $text-color;
+	}
+}
+
+
 footer {
 	background-color: $lightgray;
 	border-top: 5px solid #b0b0a8;

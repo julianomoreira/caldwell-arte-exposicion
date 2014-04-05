@@ -19,8 +19,13 @@ $marroom: #b64630;
 $text-color: #4b4b4b;
 $link-color: $mediumgray;
 
-// Typekit Typefaces
+// Breakpoint Variables
 
+$break-xsmall: 20em; /*320px*/
+$break-small: 37.5em; /*600px*/
+$break-medium: 48em; /*768px*/
+$break-large: 64em; /*1024px*/
+$break-xlarge: 75em; /*1200px*/
 
 html {}
 	
@@ -71,17 +76,20 @@ a:focus { color: #2795b6; }
 		max-width: 62.5rem;
 		margin: 0 auto;	
 		position: relative;
-		.logo {			
+		.logo-mobile {
+			display: none;
+		}
+		.logo-desktop {			
 			position: absolute;
 			top: -8px; 
-			left: 0;
+			left: 10px;
 		}	
-		.navigation {
+		.nav-desktop {
 			//border: 1px solid red;
-			padding: 50px 0 0 270px;
+			padding: 50px 0 0 260px;
 			li {				
 				float: left;
-				margin: 0 3em 0 0;
+				margin: 0 .25em 0 0;
 				a {
 					font-family: $dagny;
 					font-size: 16px;
@@ -89,9 +97,82 @@ a:focus { color: #2795b6; }
 					text-transform: uppercase;
 					color: #4b4b4b;
 					text-decoration: none;
+					padding: .5em .5em;
+					border-radius: 5px;
+				}
+				a:hover {
+					background-color: rgba(255,255,255,.4);					
 				}
 			}
 		}
+	}
+	@media screen and (max-width: $break-small) {		
+		height: 70px;
+		nav {
+			.logo-desktop {
+				display: none;
+			}
+			.logo-mobile {
+				display: block;
+				position: absolute;;
+				top: -14px;
+				left: 10px;
+			}
+			.nav-desktop {
+				display: none;
+			}	
+		}
+		.menu {
+			border: 3px solid #675d54;
+			margin: .5em;
+			width: 50px;
+			height: 42px;
+			display: block;
+			background-color: #998678;	
+			position: absolute;	
+			top: 10px; 
+			right: 5px;
+			border-radius: 5px;
+			.bar {
+				width: 70%;
+				height: 4px;
+				background-color: #fff;
+				-moz-border-radius: 5px; 
+				-webkit-border-radius: 5px; 
+				border-radius: 5px;
+				margin: 0 auto;
+			}
+			.bar1 {
+				margin-top: 7px;
+			}
+			.bar2 {
+				margin-top: 5px
+			}
+			.bar3 {
+				margin-top: 5px;
+			}
+		}
+		.nav-collapse {
+			top: 70px;
+			z-index: 1;
+			ul {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				display: block;
+				list-style: none;
+				border-bottom: 1px solid #973d25;
+				background-color: #d3d3cb;
+				li {
+					padding: 1em;
+					border-top: 1px solid rgba(255,255,255,.5);
+					a {
+						font-size: 16px;
+					}
+				}	
+			}
+			
+		}	
 	}
 }
 .container {	
@@ -99,7 +180,7 @@ a:focus { color: #2795b6; }
 }
 .left-col {
 	height: 100%;
-	padding-left: 0;
+	//padding-left: 0;
 }
 .right-col {
 	border-left: 1px solid #d3d3cb;
@@ -236,6 +317,7 @@ footer {
 		}
 		.navigation {			
 			padding:0;
+			background-color: $lightgray;
 			li {
 				padding: 30px 0 0 0;
 				a {
@@ -246,6 +328,9 @@ footer {
 					padding: 0;
 				}
 			}
-		}
+			@media screen and (max-width: $break-large) {						
+				padding: 0 1em;
+			}
+		}		
 	}
 }

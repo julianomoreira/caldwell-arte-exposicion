@@ -45,9 +45,8 @@
 			<link rel="stylesheet" type="text/css" href="/assets/css/ie.css" />
 		<![endif]-->
 		
-		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>					 -->
-		<script src="/assets/js/jquery.fittext.js"></script>				
-
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>					 -->		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//use.typekit.net/nig3ajt.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
@@ -57,18 +56,43 @@
 <div class="header">
 
 	<nav>
-		<h1 class="logo">
+		<h1 class="logo-desktop">
 			<a href="#">
 				<img src="assets/images/logo.png" />
 			</a>
 		</h1>
-		<ul class="navigation group">
+		<h1 class="logo-mobile">
+			<a href="#">
+				<img src="assets/images/logo-mobile.png" />
+			</a>
+		</h1>
+		<ul class="nav-desktop group">
 			<li><a href="">Home</a></li>
 			<li><a href="">About us</a></li>
 			<li><a href="">Artists</a></li>
 			<li><a href="">Contact Us</a></li>				
 		</ul>
 	</nav>
+	
+ 	<!-- Mobile Nav -->
+
+		<a href="#menu" id="toggle" class="menu">
+			<div class="bar bar1"></div>
+			<div class="bar bar2"></div>
+			<div class="bar bar3"></div>
+		</a>
+
+		<nav class="nav-mobile nav-collapse">			
+			<ul id="menu">
+			<li><a href="">Home</a></li>
+			<li><a href="">About us</a></li>
+			<li><a href="">Artists</a></li>
+			<li><a href="">Contact Us</a></li>				
+			</ul>
+		</nav>
+
+	<!-- Mobile Nav -->
+
 </div>
 	
 <div class="container">
@@ -154,25 +178,31 @@
 </footer>
 
    	    	
-<script src="/assets/js/jquery.flexslider.js"></script>				
-<script src="/assets/js/picturefill.js"></script>
-<script src="/assets/js/modernizr-latest.min.js"></script>					
-<script src="/assets/js/responsive-nav.min.js"></script>
-
-<script type="text/javascript">
-  $(window).load(function() {
-    $('#main-slider').flexslider({
-      animation: 'slide',      
-      controlNav: true,               
-      directionNav: true,
-      slideshow: true
-    });    
-  });
-</script>
+<script src="assets/js/jquery.flexslider.js"></script>				
+<script src="assets/js/picturefill.js"></script>
+<script src="assets/js/modernizr-latest.min.js"></script>					
+<script src="assets/js/responsive-nav.min.js"></script>
 
 <script>
 //var nav = responsiveNav(".nav-collapse");
-var navigation = responsiveNav("#nav", {customToggle: "#toggle"});
+//var navigation = responsiveNav("#nav", {customToggle: "#toggle"});
+
+var nav = responsiveNav(".nav-collapse", { // Selector
+  animate: true, // Boolean: Use CSS3 transitions, true or false
+  transition: 184, // Integer: Speed of the transition, in milliseconds
+  label: "Menu", // String: Label for the navigation toggle
+  insert: "before", // String: Insert the toggle before or after the navigation
+  customToggle: "#toggle", // Selector: Specify the ID of a custom toggle
+  closeOnNavClick: false, // Boolean: Close the navigation when one of the links are clicked
+  openPos: "relative", // String: Position of the opened nav, relative or static
+  navClass: "nav-collapse", // String: Default CSS class. If changed, you need to edit the CSS too!
+  navActiveClass: "js-nav-active", // String: Class that is added to  element when nav is active
+  jsClass: "js", // String: 'JS enabled' class which is added to  element
+  init: function(){}, // Function: Init callback
+  open: function(){}, // Function: Open callback
+  close: function(){} // Function: Close callback
+});
+
 </script>
 
 
